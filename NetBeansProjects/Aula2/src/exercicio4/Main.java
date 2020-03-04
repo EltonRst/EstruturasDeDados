@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package exercicio1;
+package exercicio4;
 
 /**
  *
@@ -16,6 +16,15 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+        Calculadora cal = new Calculadora(10, 2);
+
+        System.out.println("Soma: " + cal.somaNumeros());
+        System.out.println("Subt: " + cal.subtrNumeros());
+        System.out.println("Mult: " + cal.multNumeros());
+        System.out.println("Divi: " + cal.divNumeros());
+
+        System.out.println("Div F: " + cal.divNumeros(50, 5));
     }
-    
+
 }
