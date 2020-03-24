@@ -28,8 +28,8 @@ public class Aula3 {
     }
 
     private static void exercicio4() {
-        Stack pilhaP = new Stack(4);
-        Stack pilhaN = new Stack(4);
+        Pilha pilhaP = new Pilha(4);
+        Pilha pilhaN = new Pilha(4);
         while (true) {
             System.out.println("Por favor digite um número:");
             int num = leitorNumeros.nextInt();
@@ -53,7 +53,7 @@ public class Aula3 {
     }
 
     private static void exercicio3() {
-        Stack pilha = new Stack(5);
+        Pilha pilha = new Pilha(5);
         while (true) {
             System.out.println("Por favor digite um número:");
             int num = leitorNumeros.nextInt();
@@ -82,7 +82,7 @@ public class Aula3 {
 
         System.out.println("Favor digite uma frase:");
         String frase = leitorLetras.nextLine();
-        Stack pilha = new Stack(frase.length());
+        Pilha pilha = new Pilha(frase.length());
 
         for (int i = 0; i < frase.length(); i++) {
             pilha.push(frase.charAt(i));
@@ -99,7 +99,7 @@ public class Aula3 {
     }
 
     private static void exercicio1() {
-        Stack pilha = new Stack(5);
+        Pilha pilha = new Pilha(5);
         System.out.println("Favor digitar 15 números.");
         for (int i = 0; i < 15; i++) {
             int num = i + 1;

@@ -3,36 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aula3;
+package trabalhopilhas;
 
 /**
  *
  * @author 19221080
  */
-public class Stack {
+public class Pilha {
 
-    private int top;
-    private final Object[] stack;
-    private final int size;
+    private int topo;
+    private final Object[] pilha;
+    private final int tamaho;
 
-    public Stack(int size) {
-        this.top = -1;
-        this.size = size;
-        this.stack = new Object[this.size];
+    public Pilha(int tamanho) {
+        this.topo = -1;
+        this.tamaho = tamanho;
+        this.pilha = new Object[this.tamaho];
     }
 
     public Object top() {
         if (!isEmpty()) {
-            return stack[this.top];
+            return pilha[this.topo];
         }
         underflow();
         return null;
     }
 
-    public void push(Object value) {
+    public void push(Object valor) {
         if (!isFull()) {
-            this.top += 1;
-            this.stack[this.top] = value;
+            this.topo += 1;
+            this.pilha[this.topo] = valor;
         } else {
             overflow();
         }
@@ -40,8 +40,8 @@ public class Stack {
 
     public Object pop() {
         if (!isEmpty()) {
-            Object aux = this.stack[this.top];
-            this.top -= 1;
+            Object aux = this.pilha[this.topo];
+            this.topo -= 1;
             return aux;
         }
         underflow();
@@ -49,11 +49,11 @@ public class Stack {
     }
 
     public boolean isFull() {
-        return this.top == size - 1;
+        return this.topo == tamaho - 1;
     }
 
     public boolean isEmpty() {
-        return this.top == -1;
+        return this.topo == -1;
     }
 
     private void overflow() {
