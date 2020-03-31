@@ -60,7 +60,7 @@ public class Aula4 {
 
     public static void exercicio3() {
         Fila fila = new Fila(5);
-        Pilha pilha = new Pilha(5);
+        PilhaObject pilha = new PilhaObject(5);
 
         // Lê a fila F1
         while (!fila.isFull()) {

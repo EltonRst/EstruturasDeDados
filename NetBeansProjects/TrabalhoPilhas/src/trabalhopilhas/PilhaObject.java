@@ -9,15 +9,15 @@ package trabalhopilhas;
  *
  * @author 19221080
  */
-public class Pilha {
+public class PilhaObject {
 
     private int topo;
     private final Object[] pilha;
     private final int tamaho;
 
-    public Pilha(int tamanho) {
+    public PilhaObject(int size) {
         this.topo = -1;
-        this.tamaho = tamanho;
+        this.tamaho = size;
         this.pilha = new Object[this.tamaho];
     }
 
@@ -29,10 +29,10 @@ public class Pilha {
         return null;
     }
 
-    public void push(Object valor) {
+    public void push(Object value) {
         if (!isFull()) {
             this.topo += 1;
-            this.pilha[this.topo] = valor;
+            this.pilha[this.topo] = value;
         } else {
             overflow();
         }

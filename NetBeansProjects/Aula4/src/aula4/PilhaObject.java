@@ -9,13 +9,13 @@ package aula4;
  *
  * @author 19221080
  */
-public class Pilha {
+public class PilhaObject {
 
     private int topo;
     private final Object[] pilha;
     private final int tamaho;
 
-    public Pilha(int size) {
+    public PilhaObject(int size) {
         this.topo = -1;
         this.tamaho = size;
         this.pilha = new Object[this.tamaho];
