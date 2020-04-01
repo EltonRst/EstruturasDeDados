@@ -22,11 +22,38 @@ public class Lista {
         prim = novoNodo;
     }
 
+    public void insereFim(int elemento) {
+        if (prim == null) {
+            insereInicio(elemento);
+        } else {
+            Nodo nodoAtual = prim;
+            while (nodoAtual.next != null) {
+                nodoAtual = nodoAtual.next;
+            }
+            Nodo novoNodo = new Nodo(elemento);
+            nodoAtual.next = novoNodo;
+        }
+    }
+
     public Nodo removeInicio() {
         Nodo nodoAux = prim;
         prim = nodoAux.next;
 
         return nodoAux;
+    }
+
+    public Nodo removeFim() {
+        if (prim != null) {
+            Nodo nodoAtual = prim;
+            Nodo nodoAnt = null;
+            while (nodoAtual.next != null) {
+                nodoAnt = nodoAtual;
+                nodoAtual = nodoAtual.next;
+            }
+            nodoAnt.next = null;
+            return nodoAtual;
+        }
+        return null;
     }
 
     public void mostraLista() {

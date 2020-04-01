@@ -16,6 +16,28 @@ public class Aula5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //
+        Lista l = new Lista();
+        //
+        //l.insereInicio(10);
+        //
+        //l.insereInicio(20);
+        //
+        //l.insereInicio(30);
+        //
+        //l.insereInicio(40);
+        //
+        l.insereFim(10);
+        l.insereFim(20);
+        l.insereFim(30);
+        l.insereInicio(50);
+        l.insereFim(40);
+        //
+        l.mostraLista();
+        //
+        System.out.println("valor Removido: " + l.removeFim());
+        //        
+        l.mostraLista();
     }
-    
+
 }
