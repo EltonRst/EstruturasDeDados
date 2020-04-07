@@ -30,6 +30,7 @@ public class Aula5 {
         l.insereFim(10);
         l.insereFim(20);
         l.insereFim(30);
+        l.insereInicio(30);
         l.insereInicio(50);
         l.insereFim(40);
         //
@@ -38,6 +39,13 @@ public class Aula5 {
         System.out.println("valor Removido: " + l.removeFim());
         //        
         l.mostraLista();
+        
+        //
+        Lista busca = l.pesquisa(30);
+        
+        busca.mostraLista();
+        
+        
     }
 
 }
