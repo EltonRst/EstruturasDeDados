@@ -19,33 +19,15 @@ public class Aula5 {
         //
         Lista l = new Lista();
         //
-        //l.insereInicio(10);
-        //
-        //l.insereInicio(20);
-        //
-        //l.insereInicio(30);
-        //
-        //l.insereInicio(40);
-        //
-        l.insereFim(10);
-        l.insereFim(20);
-        l.insereFim(30);
-        l.insereInicio(30);
-        l.insereInicio(50);
-        l.insereFim(40);
+        l.insereInicio(23);
+        l.insereInicio(19);
+        l.insereFim(78);
+        l.insere(51, 3);
+        l.insere(77, 3);
+        l.removeFim();
+        l.remove(2);
         //
         l.mostraLista();
-        //
-        System.out.println("valor Removido: " + l.removeFim());
-        //        
-        l.mostraLista();
-        
-        //
-        Lista busca = l.pesquisa(30);
-        
-        busca.mostraLista();
-        
-        
     }
 
 }
