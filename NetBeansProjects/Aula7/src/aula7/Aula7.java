@@ -21,39 +21,26 @@ public class Aula7 {
     public static void main(String[] args) {
         // Nova liusta dupla
         ListaDupla LD = new ListaDupla();
-        // Número que será lido do teclado e adicionado na lista ou usado como flag
-        int num = 0;
-        //
-        // Leitura dos números para adição na lista
-        do {
-            System.out.println("Digite números pares ou ímpares, ou para sair digite o número zero: ");
-            num = ln.nextInt();
-            // Se positivo e não o flag, insere no início
-            if (num > 0) {
-                LD.insereInicio(num);
-            } else if (num < 0) { // Se negativo e não o flag, insere no fim
-                LD.insereFim(num);
-            }
-        } while (num != 0); // Flag de controle
         
-        // Lista dupla dos pares
-        ListaDupla LDPar = new ListaDupla();
-        
-        // Análise da lista dupla LD em busca dos pares
-        Nodo nodoAtual = LD.prim;
+        LD.insereFim(10);
+        LD.insereInicio(20);
+        LD.insereFim(30);
+        LD.insereInicio(40);
+                
+        // Análise Percorre a lista de trás para frente
+        Nodo nodoAtual = LD.ult;
         while (nodoAtual != null) {
-            // Verifica se é par
-            if (nodoAtual.dado % 2 == 0) {
-                LDPar.insereFim(nodoAtual.dado); // Adiciona em LDPar
-            }
-            nodoAtual = nodoAtual.next;
+            // mostra o valor do nodo
+            nodoAtual.mostraNodo();
+            //
+            nodoAtual = nodoAtual.prev;
         }
         
-        // Mosta lista coletada.
-        LD.mostraLista();
+        LD.removeInicio(); // 40
+        LD.removeFim(); // 30
         
-        // Mostra lista dos pares.
-        LDPar.mostraLista();
+        // Mosta lista
+        LD.mostraLista();
         
     }
     
