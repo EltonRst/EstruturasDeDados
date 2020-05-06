@@ -17,17 +17,17 @@ public class Aula5 {
     public static void main(String[] args) {
         // TODO code application logic here
         //
-        Lista l = new Lista();
-        //
-        l.insereInicio(23);
-        l.insereInicio(19);
-        l.insereFim(78);
-        l.insere(51, 3);
-        l.insere(77, 3);
-        l.removeFim();
-        l.remove(2);
-        //
-        l.mostraLista();
+        Lista ls = new Lista();
+        ls.insereFim(9);
+        ls.insereFim(8);
+        ls.insereFim(7);
+        ls.insereFim(6);
+        
+        ls.removeFim();
+        ls.removeFim();
+        ls.removeFim();
+        
+        ls.mostraLista();
     }
 
 }

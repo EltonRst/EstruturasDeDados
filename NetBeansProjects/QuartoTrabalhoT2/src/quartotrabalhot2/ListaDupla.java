@@ -1,4 +1,4 @@
-package aula8;
+package quartotrabalhot2;
 
 public class ListaDupla {
 

@@ -68,7 +68,7 @@ public class Aula4 {
             int num = ln.nextInt();
             fila.insere(num);
         }
-        
+
         // Adiciona os elementos da fila na pilha
         while (!pilha.isFull()) {
             pilha.push(fila.remove());
@@ -77,7 +77,7 @@ public class Aula4 {
         // Só resolveu dando new, parece que a fila retorna cheia, 
         // mesmo após remover os elementos e adicionar na pilha bug na classe fila
         fila = new Fila(5);
-        
+
         // Remove os elementos da pilha re-adicionando na fila
         while (!fila.isFull()) {
             fila.insere(pilha.pop());
